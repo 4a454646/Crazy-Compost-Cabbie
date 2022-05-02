@@ -119,8 +119,8 @@
 -define:ENABLE_LEGACY_INPUT_MANAGER
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
--r:"/home/jeff/Documents/Unity Projects/Crazy Compost Cabbie/Library/PackageCache/com.unity.testtools.codecoverage@1.1.1/lib/ReportGenerator/ReportGeneratorMerged.dll"
--r:"/home/jeff/Documents/Unity Projects/Crazy Compost Cabbie/Library/PackageCache/com.unity.visualscripting@1.7.5/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
+-r:"/home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Library/PackageCache/com.unity.testtools.codecoverage@1.1.1/lib/ReportGenerator/ReportGeneratorMerged.dll"
+-r:"/home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Library/PackageCache/com.unity.visualscripting@1.7.5/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
 -r:"/home/jeff/Unity/Hub/Editor/2022.1.0b10/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll"
 -r:"/home/jeff/Unity/Hub/Editor/2022.1.0b10/Editor/Data/Managed/UnityEngine/UnityEditor.DeviceSimulatorModule.dll"
 -r:"/home/jeff/Unity/Hub/Editor/2022.1.0b10/Editor/Data/Managed/UnityEngine/UnityEditor.DiagnosticsModule.dll"
@@ -347,6 +347,7 @@
 -r:"Library/Bee/artifacts/2400b0aE.dag/Unity.VisualStudio.Editor.ref.dll"
 -r:"Library/Bee/artifacts/2400b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/2400b0aE.dag/UnityEngine.UI.ref.dll"
+"Assets/Scripts/CameraFollow.cs"
 "Assets/Scripts/CarController.cs"
 -langversion:9.0
 

@@ -116,9 +116,9 @@
 -define:ENABLE_LEGACY_INPUT_MANAGER
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
--r:"/home/jeff/Documents/Unity Projects/Crazy Compost Cabbie/Library/PackageCache/com.unity.collab-proxy@1.15.12/Lib/Editor/PlasticSCM/Unity.Plastic.Newtonsoft.Json.dll"
--r:"/home/jeff/Documents/Unity Projects/Crazy Compost Cabbie/Library/PackageCache/com.unity.collab-proxy@1.15.12/Lib/Editor/PlasticSCM/unityplastic.dll"
--r:"/home/jeff/Documents/Unity Projects/Crazy Compost Cabbie/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll"
+-r:"/home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Library/PackageCache/com.unity.collab-proxy@1.15.12/Lib/Editor/PlasticSCM/Unity.Plastic.Newtonsoft.Json.dll"
+-r:"/home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Library/PackageCache/com.unity.collab-proxy@1.15.12/Lib/Editor/PlasticSCM/unityplastic.dll"
+-r:"/home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll"
 -r:"/home/jeff/Unity/Hub/Editor/2022.1.0b10/Editor/Data/Managed/UnityEditor.Graphs.dll"
 -r:"/home/jeff/Unity/Hub/Editor/2022.1.0b10/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll"
 -r:"/home/jeff/Unity/Hub/Editor/2022.1.0b10/Editor/Data/Managed/UnityEngine/UnityEditor.DeviceSimulatorModule.dll"

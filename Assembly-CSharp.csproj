@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{c796ddbd-729a-bfef-51a0-66d4397df356}</ProjectGuid>
+    <ProjectGuid>{3d0a9490-d160-27b2-f8e2-c46fc939ee06}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -37,6 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets/Scripts/CarController.cs" />
+     <Compile Include="Assets/Scripts/CameraFollow.cs" />
     <Reference Include="UnityEngine">
         <HintPath>/home/jeff/Unity/Hub/Editor/2022.1.0b10/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -281,10 +282,10 @@
         <HintPath>/home/jeff/Unity/Hub/Editor/2022.1.0b10/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-        <HintPath>/home/jeff/Documents/Unity Projects/Crazy Compost Cabbie/Library/PackageCache/com.unity.visualscripting@1.7.5/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+        <HintPath>/home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Library/PackageCache/com.unity.visualscripting@1.7.5/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="ReportGeneratorMerged">
-        <HintPath>/home/jeff/Documents/Unity Projects/Crazy Compost Cabbie/Library/PackageCache/com.unity.testtools.codecoverage@1.1.1/lib/ReportGenerator/ReportGeneratorMerged.dll</HintPath>
+        <HintPath>/home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Library/PackageCache/com.unity.testtools.codecoverage@1.1.1/lib/ReportGenerator/ReportGeneratorMerged.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>/home/jeff/Unity/Hub/Editor/2022.1.0b10/Editor/Data/NetStandard/ref/2.1.0/netstandard.dll</HintPath>
@@ -653,73 +654,73 @@
         <HintPath>/home/jeff/Unity/Hub/Editor/2022.1.0b10/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/mscorlib.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Flow.Editor">
-        <HintPath>/home/jeff/Documents/Unity Projects/Crazy Compost Cabbie/Library/ScriptAssemblies/Unity.VisualScripting.Flow.Editor.dll</HintPath>
+        <HintPath>/home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Library/ScriptAssemblies/Unity.VisualScripting.Flow.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-        <HintPath>/home/jeff/Documents/Unity Projects/Crazy Compost Cabbie/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+        <HintPath>/home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Shared.Editor">
-        <HintPath>/home/jeff/Documents/Unity Projects/Crazy Compost Cabbie/Library/ScriptAssemblies/Unity.VisualScripting.Shared.Editor.dll</HintPath>
+        <HintPath>/home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Library/ScriptAssemblies/Unity.VisualScripting.Shared.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-        <HintPath>/home/jeff/Documents/Unity Projects/Crazy Compost Cabbie/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+        <HintPath>/home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
-        <HintPath>/home/jeff/Documents/Unity Projects/Crazy Compost Cabbie/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+        <HintPath>/home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Performance.Profile-Analyzer.Editor">
-        <HintPath>/home/jeff/Documents/Unity Projects/Crazy Compost Cabbie/Library/ScriptAssemblies/Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
+        <HintPath>/home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Library/ScriptAssemblies/Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
-        <HintPath>/home/jeff/Documents/Unity Projects/Crazy Compost Cabbie/Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
+        <HintPath>/home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-        <HintPath>/home/jeff/Documents/Unity Projects/Crazy Compost Cabbie/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+        <HintPath>/home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-        <HintPath>/home/jeff/Documents/Unity Projects/Crazy Compost Cabbie/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+        <HintPath>/home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Core.Editor">
-        <HintPath>/home/jeff/Documents/Unity Projects/Crazy Compost Cabbie/Library/ScriptAssemblies/Unity.VisualScripting.Core.Editor.dll</HintPath>
+        <HintPath>/home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Library/ScriptAssemblies/Unity.VisualScripting.Core.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-        <HintPath>/home/jeff/Documents/Unity Projects/Crazy Compost Cabbie/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+        <HintPath>/home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.State.Editor">
-        <HintPath>/home/jeff/Documents/Unity Projects/Crazy Compost Cabbie/Library/ScriptAssemblies/Unity.VisualScripting.State.Editor.dll</HintPath>
+        <HintPath>/home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Library/ScriptAssemblies/Unity.VisualScripting.State.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
-        <HintPath>/home/jeff/Documents/Unity Projects/Crazy Compost Cabbie/Library/ScriptAssemblies/Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
+        <HintPath>/home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Library/ScriptAssemblies/Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
-        <HintPath>/home/jeff/Documents/Unity Projects/Crazy Compost Cabbie/Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
+        <HintPath>/home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Flow">
-        <HintPath>/home/jeff/Documents/Unity Projects/Crazy Compost Cabbie/Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>
+        <HintPath>/home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-        <HintPath>/home/jeff/Documents/Unity Projects/Crazy Compost Cabbie/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+        <HintPath>/home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
-        <HintPath>/home/jeff/Documents/Unity Projects/Crazy Compost Cabbie/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
+        <HintPath>/home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-        <HintPath>/home/jeff/Documents/Unity Projects/Crazy Compost Cabbie/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+        <HintPath>/home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TestTools.CodeCoverage.Editor">
-        <HintPath>/home/jeff/Documents/Unity Projects/Crazy Compost Cabbie/Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
+        <HintPath>/home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-        <HintPath>/home/jeff/Documents/Unity Projects/Crazy Compost Cabbie/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+        <HintPath>/home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.State">
-        <HintPath>/home/jeff/Documents/Unity Projects/Crazy Compost Cabbie/Library/ScriptAssemblies/Unity.VisualScripting.State.dll</HintPath>
+        <HintPath>/home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Library/ScriptAssemblies/Unity.VisualScripting.State.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Core">
-        <HintPath>/home/jeff/Documents/Unity Projects/Crazy Compost Cabbie/Library/ScriptAssemblies/Unity.VisualScripting.Core.dll</HintPath>
+        <HintPath>/home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Library/ScriptAssemblies/Unity.VisualScripting.Core.dll</HintPath>
     </Reference>
     <Reference Include="Unity.EditorCoroutines.Editor">
-        <HintPath>/home/jeff/Documents/Unity Projects/Crazy Compost Cabbie/Library/ScriptAssemblies/Unity.EditorCoroutines.Editor.dll</HintPath>
+        <HintPath>/home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Library/ScriptAssemblies/Unity.EditorCoroutines.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
