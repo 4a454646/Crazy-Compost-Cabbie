@@ -1,83 +1,45 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CarController : MonoBehaviour {
-
-    private const string HORIZONTAL = "Horizontal";
-    private const string VERTICAL = "Vertical";
-    [SerializeField] private float horizontalInput;
-    [SerializeField] private float verticalInput;
-    [SerializeField] private float motorForce = 3000f;
-    [SerializeField] private bool isBreaking = false;
-    [SerializeField] private float breakForce = 1000f;
-    [SerializeField] private float curBreakForce = 0f;
-    [SerializeField] private float curSteerAngle;
-    [SerializeField] private float maxSteerAngle = 30f;
-    [SerializeField] private WheelCollider frontLeftCollider;
-    [SerializeField] private WheelCollider frontRightCollider;
-    [SerializeField] private WheelCollider backLeftCollider;
-    [SerializeField] private WheelCollider backRightCollider;
-    [SerializeField] private Transform frontLeftTransform;
-    [SerializeField] private Transform frontRightTransform;
-    [SerializeField] private Transform backLeftTransform;
-    [SerializeField] private Transform backRightTransform;
+    [SerializeField] private WheelCollider[] wheelColliders;
+    [SerializeField] private GameObject[] wheelMeshes;
+    [SerializeField] private float torque = 200;
+    [SerializeField] private float steeringMax = 4;
 
     private void Start() {
         
     }
 
-    private void FixedUpdate() {
-        GetInput();
-        HandleMotor();
-        HandleSteering();
-        UpdateWheels();
-    }
+    private void FixedUpdate() { 
+        AnimatewheelColliders();
+        if (Input.GetKey(KeyCode.W)) {
+            foreach (WheelCollider wheel in wheelColliders) {
+                wheel.motorTorque = torque;
+            }
+        } 
 
-    private void HandleMotor() {
-        frontLeftCollider.motorTorque = verticalInput * motorForce;
-        frontRightCollider.motorTorque = verticalInput * motorForce;
-        curBreakForce = isBreaking ? breakForce : 0f;
-        if (isBreaking) { ApplyBreaking(); }
+        if (Input.GetAxis("Horizontal") != 0) {
+            wheelColliders[0].steerAngle = Input.GetAxis("Horizontal") * steeringMax;
+            wheelColliders[1].steerAngle = Input.GetAxis("Horizontal") * steeringMax;
+        }
         else {
-            frontLeftCollider.brakeTorque = 0f;
-            frontRightCollider.brakeTorque = 0f;
-            backLeftCollider.brakeTorque = 0f;
-            backRightCollider.brakeTorque = 0f;
+            for (int i = 0; i < wheelColliders.Length; i++) {
+                wheelColliders[i].steerAngle = 0;
+            }
         }
     }
 
-    private void ApplyBreaking() {
-        frontLeftCollider.brakeTorque = curBreakForce;
-        frontRightCollider.brakeTorque = curBreakForce;
-        backLeftCollider.brakeTorque = curBreakForce;
-        backRightCollider.brakeTorque = curBreakForce;
-    }
+    private void AnimatewheelColliders() {
+        Vector3 wheelPosition = Vector3.zero;
+        Quaternion wheelRotation = Quaternion.identity;
 
-    private void GetInput() {
-        horizontalInput = Input.GetAxis(HORIZONTAL);
-        verticalInput = Input.GetAxis(VERTICAL);
-        isBreaking = Input.GetKey(KeyCode.Space);
-    }
-
-    private void HandleSteering() { 
-        curSteerAngle = horizontalInput * maxSteerAngle;
-        frontLeftCollider.steerAngle = curSteerAngle;
-        frontRightCollider.steerAngle = curSteerAngle;
-    }
-
-    private void UpdateWheels() { 
-        UpdateSingleWheel(frontLeftCollider, frontLeftTransform);
-        UpdateSingleWheel(frontRightCollider, frontRightTransform);
-        UpdateSingleWheel(backLeftCollider, backLeftTransform);
-        UpdateSingleWheel(backRightCollider, backRightTransform);
-    }
-
-    private void UpdateSingleWheel(WheelCollider collider, Transform transform) {
-        Vector3 position;
-        Quaternion rotation;
-        collider.GetWorldPose(out position, out rotation);
-        transform.position = position;
-        transform.rotation = rotation;
+        for (int i = 0; i < wheelColliders.Length; i++) {
+            wheelColliders[i].GetWorldPose(out wheelPosition, out wheelRotation);
+            wheelMeshes[i].transform.position = wheelPosition;
+            wheelMeshes[i].transform.rotation = wheelRotation;
+        }
     }
 }
