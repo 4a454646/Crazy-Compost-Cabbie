@@ -5,29 +5,29 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637869370980000000
-    m_Hash: 200163259
+      ticks: 637918825580000000
+    m_Hash: 3073078203
   m_LockFileStatus:
     m_FilePath: /home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637869371010000000
-    m_Hash: 891331135
+      ticks: 637918825610000000
+    m_Hash: 3832141955
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
   m_LocalFileStatus: []
 m_ProjectPath: /home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Packages
-m_EditorVersion: 2022.1.0b10 (ae8cd2bb2a22)
+m_EditorVersion: 2021.2.0b1 (b0978dae4864)
 m_ResolvedPackages:
-- packageId: com.unity.collab-proxy@1.15.12
+- packageId: com.unity.collab-proxy@1.5.7
   testable: 0
   isDirectDependency: 1
-  version: 1.15.12
+  version: 1.5.7
   source: 1
-  resolvedPath: /home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Library/PackageCache/com.unity.collab-proxy@1.15.12
+  resolvedPath: /home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Library/PackageCache/com.unity.collab-proxy@1.5.7
   assetPath: Packages/com.unity.collab-proxy
   name: com.unity.collab-proxy
   displayName: Version Control
@@ -80,6 +80,8 @@ m_ResolvedPackages:
     - 1.14.13
     - 1.14.15
     - 1.14.16
+    - 1.14.17
+    - 1.14.18
     - 1.15.1
     - 1.15.4
     - 1.15.7
@@ -88,6 +90,10 @@ m_ResolvedPackages:
     - 1.15.13
     - 1.15.15
     - 1.15.16
+    - 1.15.17
+    - 1.15.18
+    - 1.17.0
+    - 1.17.1
     - 2.0.0-preview.6
     - 2.0.0-preview.8
     - 2.0.0-preview.15
@@ -99,10 +105,37 @@ m_ResolvedPackages:
     - 2.1.0-preview.5
     - 2.1.0-preview.6
     compatible:
+    - 1.5.7
+    - 1.6.0
+    - 1.7.1
+    - 1.8.0
+    - 1.9.0
+    - 1.10.2
+    - 1.11.2
+    - 1.12.5
+    - 1.13.5
+    - 1.14.1
+    - 1.14.4
+    - 1.14.7
+    - 1.14.9
+    - 1.14.12
+    - 1.14.13
+    - 1.14.15
+    - 1.14.16
+    - 1.14.17
+    - 1.14.18
+    - 1.15.1
+    - 1.15.4
+    - 1.15.7
+    - 1.15.9
     - 1.15.12
     - 1.15.13
     - 1.15.15
     - 1.15.16
+    - 1.15.17
+    - 1.15.18
+    - 1.17.0
+    - 1.17.1
     - 2.0.0-preview.6
     - 2.0.0-preview.8
     - 2.0.0-preview.15
@@ -113,29 +146,24 @@ m_ResolvedPackages:
     - 2.1.0-preview.3
     - 2.1.0-preview.5
     - 2.1.0-preview.6
-    verified: 1.15.16
+    verified: 1.5.7
   dependencies:
-  - name: com.unity.services.core
-    version: 1.0.1
+  - name: com.unity.nuget.newtonsoft-json
+    version: 2.0.0
   resolvedDependencies:
-  - name: com.unity.services.core
-    version: 1.0.1
-  - name: com.unity.modules.unitywebrequest
-    version: 1.0.0
+  - name: com.unity.nuget.newtonsoft-json
+    version: 2.0.0
   keywords:
-  - backup
-  - cloud
-  - collab
-  - collaborate
-  - collaboration
-  - control
-  - plastic
-  - plasticscm
-  - source
-  - team
-  - teams
+  - vsc
   - version
-  - vcs
+  - control
+  - collab
+  - collaboration
+  - collaborate
+  - teams
+  - team
+  - cloud
+  - backup
   registry:
     id: main
     name: 
@@ -143,111 +171,26 @@ m_ResolvedPackages:
     scopes: []
     isDefault: 1
     capabilities: 7
+  hasRegistry: 1
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 637789721280000000
+  datePublishedTicks: 637551413290000000
   documentationUrl: 
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.cloud.collaborate.git
-    revision: 5ca1fd4ca9f999e087d19e98afaf99905a582771
+    revision: f079d307344f568804d3ea6d781013135e614e45
     path: 
   unityLifecycle:
-    version: 1.15.12
+    version: 1.5.7
     nextVersion: 
-- packageId: com.unity.feature.development@1.0.1
+- packageId: com.unity.ide.rider@3.0.7
   testable: 0
   isDirectDependency: 1
-  version: 1.0.1
-  source: 2
-  resolvedPath: /home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Library/PackageCache/com.unity.feature.development@1.0.1
-  assetPath: Packages/com.unity.feature.development
-  name: com.unity.feature.development
-  displayName: Engineering
-  author:
-    name: 
-    email: 
-    url: 
-  category: 
-  type: feature
-  description: "Optimize your development experience in Unity with the Dev Tools
-    feature set. Enable support for multiple integrated development environments
-    (IDE) for editing your Unity code. Get access to development tools to help you
-    test and analyze your project\u2019s performance."
-  status: 4
-  errors: []
-  versions:
-    all:
-    - 1.0.1
-    compatible:
-    - 1.0.1
-    verified: 1.0.1
-  dependencies:
-  - name: com.unity.ide.visualstudio
-    version: default
-  - name: com.unity.ide.rider
-    version: default
-  - name: com.unity.ide.vscode
-    version: default
-  - name: com.unity.editorcoroutines
-    version: default
-  - name: com.unity.performance.profile-analyzer
-    version: default
-  - name: com.unity.test-framework
-    version: default
-  - name: com.unity.testtools.codecoverage
-    version: default
-  resolvedDependencies:
-  - name: com.unity.ide.visualstudio
-    version: 2.0.14
-  - name: com.unity.test-framework
-    version: 1.1.31
-  - name: com.unity.ext.nunit
-    version: 1.0.6
-  - name: com.unity.modules.imgui
-    version: 1.0.0
-  - name: com.unity.modules.jsonserialize
-    version: 1.0.0
-  - name: com.unity.ide.rider
-    version: 3.0.12
-  - name: com.unity.ide.vscode
-    version: 1.2.5
-  - name: com.unity.editorcoroutines
-    version: 1.0.0
-  - name: com.unity.performance.profile-analyzer
-    version: 1.1.1
-  - name: com.unity.testtools.codecoverage
-    version: 1.1.1
-  - name: com.unity.settings-manager
-    version: 2.0.1
-  keywords: []
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-  hideInEditor: 0
-  isAssetStorePackage: 0
-  datePublishedTicks: 0
-  documentationUrl: 
-  hasRepository: 0
-  repository:
-    type: 
-    url: 
-    revision: 
-    path: 
-  unityLifecycle:
-    version: 1.0.1
-    nextVersion: 
-- packageId: com.unity.ide.rider@3.0.12
-  testable: 0
-  isDirectDependency: 1
-  version: 3.0.12
+  version: 3.0.7
   source: 1
-  resolvedPath: /home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Library/PackageCache/com.unity.ide.rider@3.0.12
+  resolvedPath: /home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Library/PackageCache/com.unity.ide.rider@3.0.7
   assetPath: Packages/com.unity.ide.rider
   name: com.unity.ide.rider
   displayName: JetBrains Rider Editor
@@ -294,11 +237,16 @@ m_ResolvedPackages:
     - 3.0.12
     - 3.0.13
     - 3.0.14
+    - 3.0.15
     compatible:
+    - 3.0.7
+    - 3.0.9
+    - 3.0.10
     - 3.0.12
     - 3.0.13
     - 3.0.14
-    verified: 3.0.14
+    - 3.0.15
+    verified: 3.0.15
   dependencies:
   - name: com.unity.ext.nunit
     version: 1.0.6
@@ -313,25 +261,26 @@ m_ResolvedPackages:
     scopes: []
     isDefault: 1
     capabilities: 7
+  hasRegistry: 1
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 637789697420000000
+  datePublishedTicks: 637572251600000000
   documentationUrl: 
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.rider.git
-    revision: 453b1e1578da65dafbc7ad6fb71a95ca6b8730f7
+    revision: 3007c42a679bbe2c082c276e8d79279110964553
     path: 
   unityLifecycle:
-    version: 3.0.12
+    version: 3.0.7
     nextVersion: 
-- packageId: com.unity.ide.visualstudio@2.0.14
+- packageId: com.unity.ide.visualstudio@2.0.9
   testable: 0
   isDirectDependency: 1
-  version: 2.0.14
+  version: 2.0.9
   source: 1
-  resolvedPath: /home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Library/PackageCache/com.unity.ide.visualstudio@2.0.14
+  resolvedPath: /home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Library/PackageCache/com.unity.ide.visualstudio@2.0.9
   assetPath: Packages/com.unity.ide.visualstudio
   name: com.unity.ide.visualstudio
   displayName: Visual Studio Editor
@@ -366,16 +315,21 @@ m_ResolvedPackages:
     - 2.0.12
     - 2.0.14
     - 2.0.15
+    - 2.0.16
     compatible:
+    - 2.0.9
+    - 2.0.11
+    - 2.0.12
     - 2.0.14
     - 2.0.15
-    verified: 2.0.15
+    - 2.0.16
+    verified: 2.0.16
   dependencies:
   - name: com.unity.test-framework
     version: 1.1.9
   resolvedDependencies:
   - name: com.unity.test-framework
-    version: 1.1.31
+    version: 1.1.26
   - name: com.unity.ext.nunit
     version: 1.0.6
   - name: com.unity.modules.imgui
@@ -390,25 +344,26 @@ m_ResolvedPackages:
     scopes: []
     isDefault: 1
     capabilities: 7
+  hasRegistry: 1
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 637782923640000000
+  datePublishedTicks: 637580705480000000
   documentationUrl: 
-  hasRepository: 0
+  hasRepository: 1
   repository:
-    type: 
-    url: 
-    revision: 
+    type: git
+    url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.visualstudio.git
+    revision: c7cd4c6319806423b3d918b3e9599244e3993d41
     path: 
   unityLifecycle:
-    version: 2.0.14
+    version: 2.0.9
     nextVersion: 
-- packageId: com.unity.ide.vscode@1.2.5
+- packageId: com.unity.ide.vscode@1.2.3
   testable: 0
   isDirectDependency: 1
-  version: 1.2.5
+  version: 1.2.3
   source: 1
-  resolvedPath: /home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Library/PackageCache/com.unity.ide.vscode@1.2.5
+  resolvedPath: /home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Library/PackageCache/com.unity.ide.vscode@1.2.3
   assetPath: Packages/com.unity.ide.vscode
   name: com.unity.ide.vscode
   displayName: Visual Studio Code Editor
@@ -439,6 +394,8 @@ m_ResolvedPackages:
     - 1.2.4
     - 1.2.5
     compatible:
+    - 1.2.3
+    - 1.2.4
     - 1.2.5
     verified: 1.2.5
   dependencies: []
@@ -451,25 +408,26 @@ m_ResolvedPackages:
     scopes: []
     isDefault: 1
     capabilities: 7
+  hasRegistry: 1
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 637800255360000000
+  datePublishedTicks: 637394922300000000
   documentationUrl: 
   hasRepository: 1
   repository:
     type: git
-    url: https://github.com/Unity-Technologies/com.unity.ide.vscode.git
-    revision: b0740c80bfc2440527c317109f7c3d9100132722
+    url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.vscode.git
+    revision: b5ec9b38109e52b1b26597d521e4df75e042ebb9
     path: 
   unityLifecycle:
-    version: 1.2.5
+    version: 1.2.3
     nextVersion: 
-- packageId: com.unity.test-framework@1.1.31
+- packageId: com.unity.test-framework@1.1.26
   testable: 0
   isDirectDependency: 1
-  version: 1.1.31
+  version: 1.1.26
   source: 1
-  resolvedPath: /home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Library/PackageCache/com.unity.test-framework@1.1.31
+  resolvedPath: /home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Library/PackageCache/com.unity.test-framework@1.1.26
   assetPath: Packages/com.unity.test-framework
   name: com.unity.test-framework
   displayName: Test Framework
@@ -521,6 +479,10 @@ m_ResolvedPackages:
     - 2.0.1-pre.12
     - 2.0.1-pre.18
     compatible:
+    - 1.1.26
+    - 1.1.27
+    - 1.1.29
+    - 1.1.30
     - 1.1.31
     - 2.0.1-exp.1
     - 2.0.1-pre.12
@@ -550,18 +512,19 @@ m_ResolvedPackages:
     scopes: []
     isDefault: 1
     capabilities: 7
+  hasRegistry: 1
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 637804266210000000
+  datePublishedTicks: 637576439750000000
   documentationUrl: 
   hasRepository: 1
   repository:
     type: git
-    url: https://github.com/Unity-Technologies/com.unity.test-framework.git
-    revision: 438b0defc147c9be5c969ca79ff03a722b4590ed
+    url: git+https://github.com/Unity-Technologies/com.unity.test-framework.git
+    revision: ea9d07e64e6d63c4f2fd8b6bc57df0f452ff4fae
     path: 
   unityLifecycle:
-    version: 1.1.31
+    version: 1.1.26
     nextVersion: 
 - packageId: com.unity.textmeshpro@3.0.6
   testable: 0
@@ -691,7 +654,6 @@ m_ResolvedPackages:
     - 3.2.0-pre.1
     - 3.2.0-pre.2
     - 3.2.0-pre.3
-    - 4.0.0-pre.1
     verified: 3.0.6
   dependencies:
   - name: com.unity.ugui
@@ -716,6 +678,7 @@ m_ResolvedPackages:
     scopes: []
     isDefault: 1
     capabilities: 7
+  hasRegistry: 1
   hideInEditor: 1
   isAssetStorePackage: 0
   datePublishedTicks: 637547111200000000
@@ -729,12 +692,12 @@ m_ResolvedPackages:
   unityLifecycle:
     version: 3.0.6
     nextVersion: 
-- packageId: com.unity.timeline@1.7.0-pre.2
+- packageId: com.unity.timeline@1.6.0-pre.5
   testable: 0
   isDirectDependency: 1
-  version: 1.7.0-pre.2
+  version: 1.6.0-pre.5
   source: 1
-  resolvedPath: /home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Library/PackageCache/com.unity.timeline@1.7.0-pre.2
+  resolvedPath: /home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Library/PackageCache/com.unity.timeline@1.6.0-pre.5
   assetPath: Packages/com.unity.timeline
   name: com.unity.timeline
   displayName: Timeline
@@ -823,10 +786,16 @@ m_ResolvedPackages:
     - 1.7.0
     - 1.7.1
     compatible:
+    - 1.6.0-pre.5
+    - 1.6.1
+    - 1.6.2
+    - 1.6.3
+    - 1.6.4
+    - 1.7.0-pre.1
     - 1.7.0-pre.2
     - 1.7.0
     - 1.7.1
-    verified: 1.7.1
+    verified: 1.6.4
   dependencies:
   - name: com.unity.modules.director
     version: 1.0.0
@@ -858,18 +827,19 @@ m_ResolvedPackages:
     scopes: []
     isDefault: 1
     capabilities: 7
+  hasRegistry: 1
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 637789039080000000
+  datePublishedTicks: 637564549370000000
   documentationUrl: 
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.timeline.git
-    revision: 5c87a8a9427d5e2632b8a972173a0939c9be3e67
+    revision: 9a9ceeb041fdb50dffef5c7350776bb3b258b16b
     path: 
   unityLifecycle:
-    version: 1.7.0-pre.2
+    version: 1.6.0-pre.5
     nextVersion: 
 - packageId: com.unity.ugui@1.0.0
   testable: 0
@@ -914,12 +884,13 @@ m_ResolvedPackages:
   - Unity UI
   - Canvas
   registry:
-    id: main
+    id: 
     name: 
-    url: https://packages.unity.com
+    url: 
     scopes: []
-    isDefault: 1
-    capabilities: 7
+    isDefault: 0
+    capabilities: 0
+  hasRegistry: 0
   hideInEditor: 1
   isAssetStorePackage: 0
   datePublishedTicks: 0
@@ -933,12 +904,12 @@ m_ResolvedPackages:
   unityLifecycle:
     version: 1.0.0
     nextVersion: 
-- packageId: com.unity.visualscripting@1.7.5
+- packageId: com.unity.visualscripting@1.7.2
   testable: 0
   isDirectDependency: 1
-  version: 1.7.5
+  version: 1.7.2
   source: 1
-  resolvedPath: /home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Library/PackageCache/com.unity.visualscripting@1.7.5
+  resolvedPath: /home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Library/PackageCache/com.unity.visualscripting@1.7.2
   assetPath: Packages/com.unity.visualscripting
   name: com.unity.visualscripting
   displayName: Visual Scripting
@@ -978,13 +949,16 @@ m_ResolvedPackages:
     - 1.7.5
     - 1.7.6
     - 1.7.7
+    - 1.7.8
     - 1.8.0-pre.1
     compatible:
+    - 1.7.2
+    - 1.7.3
     - 1.7.5
     - 1.7.6
     - 1.7.7
-    - 1.8.0-pre.1
-    verified: 1.7.7
+    - 1.7.8
+    verified: 1.7.8
   dependencies:
   - name: com.unity.ugui
     version: 1.0.0
@@ -1007,18 +981,19 @@ m_ResolvedPackages:
     scopes: []
     isDefault: 1
     capabilities: 7
+  hasRegistry: 1
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 637702395950000000
+  datePublishedTicks: 637586779960000000
   documentationUrl: 
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.visualscripting.git
-    revision: 92f3faf93c43d4d12ab8258dedff1ec23db47872
+    revision: 50ad819715a5bcbfd1131cc47e51dc8c3cea57e2
     path: 
   unityLifecycle:
-    version: 1.7.5
+    version: 1.7.2
     nextVersion: 
 - packageId: com.unity.modules.ai@1.0.0
   testable: 0
@@ -1049,12 +1024,13 @@ m_ResolvedPackages:
   resolvedDependencies: []
   keywords: []
   registry:
-    id: main
+    id: 
     name: 
-    url: https://packages.unity.com
+    url: 
     scopes: []
-    isDefault: 1
-    capabilities: 7
+    isDefault: 0
+    capabilities: 0
+  hasRegistry: 0
   hideInEditor: 1
   isAssetStorePackage: 0
   datePublishedTicks: 0
@@ -1096,12 +1072,13 @@ m_ResolvedPackages:
   resolvedDependencies: []
   keywords: []
   registry:
-    id: main
+    id: 
     name: 
-    url: https://packages.unity.com
+    url: 
     scopes: []
-    isDefault: 1
-    capabilities: 7
+    isDefault: 0
+    capabilities: 0
+  hasRegistry: 0
   hideInEditor: 1
   isAssetStorePackage: 0
   datePublishedTicks: 0
@@ -1144,12 +1121,13 @@ m_ResolvedPackages:
   resolvedDependencies: []
   keywords: []
   registry:
-    id: main
+    id: 
     name: 
-    url: https://packages.unity.com
+    url: 
     scopes: []
-    isDefault: 1
-    capabilities: 7
+    isDefault: 0
+    capabilities: 0
+  hasRegistry: 0
   hideInEditor: 1
   isAssetStorePackage: 0
   datePublishedTicks: 0
@@ -1192,12 +1170,13 @@ m_ResolvedPackages:
   resolvedDependencies: []
   keywords: []
   registry:
-    id: main
+    id: 
     name: 
-    url: https://packages.unity.com
+    url: 
     scopes: []
-    isDefault: 1
-    capabilities: 7
+    isDefault: 0
+    capabilities: 0
+  hasRegistry: 0
   hideInEditor: 1
   isAssetStorePackage: 0
   datePublishedTicks: 0
@@ -1240,12 +1219,13 @@ m_ResolvedPackages:
   resolvedDependencies: []
   keywords: []
   registry:
-    id: main
+    id: 
     name: 
-    url: https://packages.unity.com
+    url: 
     scopes: []
-    isDefault: 1
-    capabilities: 7
+    isDefault: 0
+    capabilities: 0
+  hasRegistry: 0
   hideInEditor: 1
   isAssetStorePackage: 0
   datePublishedTicks: 0
@@ -1292,12 +1272,13 @@ m_ResolvedPackages:
     version: 1.0.0
   keywords: []
   registry:
-    id: main
+    id: 
     name: 
-    url: https://packages.unity.com
+    url: 
     scopes: []
-    isDefault: 1
-    capabilities: 7
+    isDefault: 0
+    capabilities: 0
+  hasRegistry: 0
   hideInEditor: 1
   isAssetStorePackage: 0
   datePublishedTicks: 0
@@ -1348,12 +1329,13 @@ m_ResolvedPackages:
     version: 1.0.0
   keywords: []
   registry:
-    id: main
+    id: 
     name: 
-    url: https://packages.unity.com
+    url: 
     scopes: []
-    isDefault: 1
-    capabilities: 7
+    isDefault: 0
+    capabilities: 0
+  hasRegistry: 0
   hideInEditor: 1
   isAssetStorePackage: 0
   datePublishedTicks: 0
@@ -1397,12 +1379,13 @@ m_ResolvedPackages:
   resolvedDependencies: []
   keywords: []
   registry:
-    id: main
+    id: 
     name: 
-    url: https://packages.unity.com
+    url: 
     scopes: []
-    isDefault: 1
-    capabilities: 7
+    isDefault: 0
+    capabilities: 0
+  hasRegistry: 0
   hideInEditor: 1
   isAssetStorePackage: 0
   datePublishedTicks: 0
@@ -1445,12 +1428,13 @@ m_ResolvedPackages:
   resolvedDependencies: []
   keywords: []
   registry:
-    id: main
+    id: 
     name: 
-    url: https://packages.unity.com
+    url: 
     scopes: []
-    isDefault: 1
-    capabilities: 7
+    isDefault: 0
+    capabilities: 0
+  hasRegistry: 0
   hideInEditor: 1
   isAssetStorePackage: 0
   datePublishedTicks: 0
@@ -1493,12 +1477,13 @@ m_ResolvedPackages:
   resolvedDependencies: []
   keywords: []
   registry:
-    id: main
+    id: 
     name: 
-    url: https://packages.unity.com
+    url: 
     scopes: []
-    isDefault: 1
-    capabilities: 7
+    isDefault: 0
+    capabilities: 0
+  hasRegistry: 0
   hideInEditor: 1
   isAssetStorePackage: 0
   datePublishedTicks: 0
@@ -1541,12 +1526,13 @@ m_ResolvedPackages:
   resolvedDependencies: []
   keywords: []
   registry:
-    id: main
+    id: 
     name: 
-    url: https://packages.unity.com
+    url: 
     scopes: []
-    isDefault: 1
-    capabilities: 7
+    isDefault: 0
+    capabilities: 0
+  hasRegistry: 0
   hideInEditor: 1
   isAssetStorePackage: 0
   datePublishedTicks: 0
@@ -1589,12 +1575,13 @@ m_ResolvedPackages:
   resolvedDependencies: []
   keywords: []
   registry:
-    id: main
+    id: 
     name: 
-    url: https://packages.unity.com
+    url: 
     scopes: []
-    isDefault: 1
-    capabilities: 7
+    isDefault: 0
+    capabilities: 0
+  hasRegistry: 0
   hideInEditor: 1
   isAssetStorePackage: 0
   datePublishedTicks: 0
@@ -1637,12 +1624,13 @@ m_ResolvedPackages:
   resolvedDependencies: []
   keywords: []
   registry:
-    id: main
+    id: 
     name: 
-    url: https://packages.unity.com
+    url: 
     scopes: []
-    isDefault: 1
-    capabilities: 7
+    isDefault: 0
+    capabilities: 0
+  hasRegistry: 0
   hideInEditor: 1
   isAssetStorePackage: 0
   datePublishedTicks: 0
@@ -1689,12 +1677,13 @@ m_ResolvedPackages:
     version: 1.0.0
   keywords: []
   registry:
-    id: main
+    id: 
     name: 
-    url: https://packages.unity.com
+    url: 
     scopes: []
-    isDefault: 1
-    capabilities: 7
+    isDefault: 0
+    capabilities: 0
+  hasRegistry: 0
   hideInEditor: 1
   isAssetStorePackage: 0
   datePublishedTicks: 0
@@ -1737,12 +1726,13 @@ m_ResolvedPackages:
   resolvedDependencies: []
   keywords: []
   registry:
-    id: main
+    id: 
     name: 
-    url: https://packages.unity.com
+    url: 
     scopes: []
-    isDefault: 1
-    capabilities: 7
+    isDefault: 0
+    capabilities: 0
+  hasRegistry: 0
   hideInEditor: 1
   isAssetStorePackage: 0
   datePublishedTicks: 0
@@ -1793,12 +1783,13 @@ m_ResolvedPackages:
     version: 1.0.0
   keywords: []
   registry:
-    id: main
+    id: 
     name: 
-    url: https://packages.unity.com
+    url: 
     scopes: []
-    isDefault: 1
-    capabilities: 7
+    isDefault: 0
+    capabilities: 0
+  hasRegistry: 0
   hideInEditor: 1
   isAssetStorePackage: 0
   datePublishedTicks: 0
@@ -1844,12 +1835,13 @@ m_ResolvedPackages:
     version: 1.0.0
   keywords: []
   registry:
-    id: main
+    id: 
     name: 
-    url: https://packages.unity.com
+    url: 
     scopes: []
-    isDefault: 1
-    capabilities: 7
+    isDefault: 0
+    capabilities: 0
+  hasRegistry: 0
   hideInEditor: 1
   isAssetStorePackage: 0
   datePublishedTicks: 0
@@ -1892,12 +1884,13 @@ m_ResolvedPackages:
   resolvedDependencies: []
   keywords: []
   registry:
-    id: main
+    id: 
     name: 
-    url: https://packages.unity.com
+    url: 
     scopes: []
-    isDefault: 1
-    capabilities: 7
+    isDefault: 0
+    capabilities: 0
+  hasRegistry: 0
   hideInEditor: 1
   isAssetStorePackage: 0
   datePublishedTicks: 0
@@ -1956,12 +1949,13 @@ m_ResolvedPackages:
     version: 1.0.0
   keywords: []
   registry:
-    id: main
+    id: 
     name: 
-    url: https://packages.unity.com
+    url: 
     scopes: []
-    isDefault: 1
-    capabilities: 7
+    isDefault: 0
+    capabilities: 0
+  hasRegistry: 0
   hideInEditor: 1
   isAssetStorePackage: 0
   datePublishedTicks: 0
@@ -2004,12 +1998,13 @@ m_ResolvedPackages:
   resolvedDependencies: []
   keywords: []
   registry:
-    id: main
+    id: 
     name: 
-    url: https://packages.unity.com
+    url: 
     scopes: []
-    isDefault: 1
-    capabilities: 7
+    isDefault: 0
+    capabilities: 0
+  hasRegistry: 0
   hideInEditor: 1
   isAssetStorePackage: 0
   datePublishedTicks: 0
@@ -2060,12 +2055,13 @@ m_ResolvedPackages:
     version: 1.0.0
   keywords: []
   registry:
-    id: main
+    id: 
     name: 
-    url: https://packages.unity.com
+    url: 
     scopes: []
-    isDefault: 1
-    capabilities: 7
+    isDefault: 0
+    capabilities: 0
+  hasRegistry: 0
   hideInEditor: 1
   isAssetStorePackage: 0
   datePublishedTicks: 0
@@ -2108,12 +2104,13 @@ m_ResolvedPackages:
   resolvedDependencies: []
   keywords: []
   registry:
-    id: main
+    id: 
     name: 
-    url: https://packages.unity.com
+    url: 
     scopes: []
-    isDefault: 1
-    capabilities: 7
+    isDefault: 0
+    capabilities: 0
+  hasRegistry: 0
   hideInEditor: 1
   isAssetStorePackage: 0
   datePublishedTicks: 0
@@ -2164,12 +2161,13 @@ m_ResolvedPackages:
     version: 1.0.0
   keywords: []
   registry:
-    id: main
+    id: 
     name: 
-    url: https://packages.unity.com
+    url: 
     scopes: []
-    isDefault: 1
-    capabilities: 7
+    isDefault: 0
+    capabilities: 0
+  hasRegistry: 0
   hideInEditor: 1
   isAssetStorePackage: 0
   datePublishedTicks: 0
@@ -2220,12 +2218,13 @@ m_ResolvedPackages:
     version: 1.0.0
   keywords: []
   registry:
-    id: main
+    id: 
     name: 
-    url: https://packages.unity.com
+    url: 
     scopes: []
-    isDefault: 1
-    capabilities: 7
+    isDefault: 0
+    capabilities: 0
+  hasRegistry: 0
   hideInEditor: 1
   isAssetStorePackage: 0
   datePublishedTicks: 0
@@ -2276,12 +2275,13 @@ m_ResolvedPackages:
     version: 1.0.0
   keywords: []
   registry:
-    id: main
+    id: 
     name: 
-    url: https://packages.unity.com
+    url: 
     scopes: []
-    isDefault: 1
-    capabilities: 7
+    isDefault: 0
+    capabilities: 0
+  hasRegistry: 0
   hideInEditor: 1
   isAssetStorePackage: 0
   datePublishedTicks: 0
@@ -2348,12 +2348,13 @@ m_ResolvedPackages:
     version: 1.0.0
   keywords: []
   registry:
-    id: main
+    id: 
     name: 
-    url: https://packages.unity.com
+    url: 
     scopes: []
-    isDefault: 1
-    capabilities: 7
+    isDefault: 0
+    capabilities: 0
+  hasRegistry: 0
   hideInEditor: 1
   isAssetStorePackage: 0
   datePublishedTicks: 0
@@ -2400,12 +2401,13 @@ m_ResolvedPackages:
     version: 1.0.0
   keywords: []
   registry:
-    id: main
+    id: 
     name: 
-    url: https://packages.unity.com
+    url: 
     scopes: []
-    isDefault: 1
-    capabilities: 7
+    isDefault: 0
+    capabilities: 0
+  hasRegistry: 0
   hideInEditor: 1
   isAssetStorePackage: 0
   datePublishedTicks: 0
@@ -2460,12 +2462,13 @@ m_ResolvedPackages:
     version: 1.0.0
   keywords: []
   registry:
-    id: main
+    id: 
     name: 
-    url: https://packages.unity.com
+    url: 
     scopes: []
-    isDefault: 1
-    capabilities: 7
+    isDefault: 0
+    capabilities: 0
+  hasRegistry: 0
   hideInEditor: 1
   isAssetStorePackage: 0
   datePublishedTicks: 0
@@ -2522,12 +2525,13 @@ m_ResolvedPackages:
     version: 1.0.0
   keywords: []
   registry:
-    id: main
+    id: 
     name: 
-    url: https://packages.unity.com
+    url: 
     scopes: []
-    isDefault: 1
-    capabilities: 7
+    isDefault: 0
+    capabilities: 0
+  hasRegistry: 0
   hideInEditor: 1
   isAssetStorePackage: 0
   datePublishedTicks: 0
@@ -2570,12 +2574,13 @@ m_ResolvedPackages:
   resolvedDependencies: []
   keywords: []
   registry:
-    id: main
+    id: 
     name: 
-    url: https://packages.unity.com
+    url: 
     scopes: []
-    isDefault: 1
-    capabilities: 7
+    isDefault: 0
+    capabilities: 0
+  hasRegistry: 0
   hideInEditor: 1
   isAssetStorePackage: 0
   datePublishedTicks: 0
@@ -2630,12 +2635,13 @@ m_ResolvedPackages:
     version: 1.0.0
   keywords: []
   registry:
-    id: main
+    id: 
     name: 
-    url: https://packages.unity.com
+    url: 
     scopes: []
-    isDefault: 1
-    capabilities: 7
+    isDefault: 0
+    capabilities: 0
+  hasRegistry: 0
   hideInEditor: 1
   isAssetStorePackage: 0
   datePublishedTicks: 0
@@ -2682,12 +2688,13 @@ m_ResolvedPackages:
     version: 1.0.0
   keywords: []
   registry:
-    id: main
+    id: 
     name: 
-    url: https://packages.unity.com
+    url: 
     scopes: []
-    isDefault: 1
-    capabilities: 7
+    isDefault: 0
+    capabilities: 0
+  hasRegistry: 0
   hideInEditor: 1
   isAssetStorePackage: 0
   datePublishedTicks: 0
@@ -2741,12 +2748,13 @@ m_ResolvedPackages:
     version: 1.0.0
   keywords: []
   registry:
-    id: main
+    id: 
     name: 
-    url: https://packages.unity.com
+    url: 
     scopes: []
-    isDefault: 1
-    capabilities: 7
+    isDefault: 0
+    capabilities: 0
+  hasRegistry: 0
   hideInEditor: 1
   isAssetStorePackage: 0
   datePublishedTicks: 0
@@ -2805,6 +2813,7 @@ m_ResolvedPackages:
     scopes: []
     isDefault: 1
     capabilities: 7
+  hasRegistry: 1
   hideInEditor: 1
   isAssetStorePackage: 0
   datePublishedTicks: 637429759280000000
@@ -2818,333 +2827,39 @@ m_ResolvedPackages:
   unityLifecycle:
     version: 1.0.6
     nextVersion: 
-- packageId: com.unity.editorcoroutines@1.0.0
+- packageId: com.unity.nuget.newtonsoft-json@2.0.0
   testable: 0
   isDirectDependency: 0
-  version: 1.0.0
+  version: 2.0.0
   source: 1
-  resolvedPath: /home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Library/PackageCache/com.unity.editorcoroutines@1.0.0
-  assetPath: Packages/com.unity.editorcoroutines
-  name: com.unity.editorcoroutines
-  displayName: Editor Coroutines
+  resolvedPath: /home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0
+  assetPath: Packages/com.unity.nuget.newtonsoft-json
+  name: com.unity.nuget.newtonsoft-json
+  displayName: Newtonsoft Json
   author:
     name: 
     email: 
     url: 
   category: 
-  type: 
-  description: 'The editor coroutines package allows developers to start constructs
-    similar to Unity''s monobehaviour based coroutines within the editor using abitrary
-    objects. '
-  status: 4
-  errors: []
-  versions:
-    all:
-    - 0.0.1-preview.3
-    - 0.0.1-preview.4
-    - 0.0.1-preview.5
-    - 0.0.2-preview.1
-    - 0.1.0-preview.1
-    - 0.1.0-preview.2
-    - 1.0.0
-    compatible:
-    - 1.0.0
-    verified: 1.0.0
-  dependencies: []
-  resolvedDependencies: []
-  keywords:
-  - coroutine
-  - coroutines
-  - editor
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-  hideInEditor: 1
-  isAssetStorePackage: 0
-  datePublishedTicks: 637232611380000000
-  documentationUrl: 
-  hasRepository: 1
-  repository:
-    type: git
-    url: https://github.cds.internal.unity3d.com/unity/com.unity.editorcoroutines.git
-    revision: f67fc9992bbc7a553b17375de53a8b2db136528e
-    path: 
-  unityLifecycle:
-    version: 1.0.0
-    nextVersion: 
-- packageId: com.unity.performance.profile-analyzer@1.1.1
-  testable: 0
-  isDirectDependency: 0
-  version: 1.1.1
-  source: 1
-  resolvedPath: /home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Library/PackageCache/com.unity.performance.profile-analyzer@1.1.1
-  assetPath: Packages/com.unity.performance.profile-analyzer
-  name: com.unity.performance.profile-analyzer
-  displayName: Profile Analyzer
-  author:
-    name: 
-    email: 
-    url: 
-  category: 
-  type: 
-  description: "The Profile Analyzer tool supports the standard Unity Profiler. You
-    can use it to analyze multiple frames and multiple data sets of the CPU data
-    in the Profiler.\n\nMain features: \n\u25AA Multi-frame analysis of a single
-    set of Profiler CPU data \n\u25AA Comparison of two multi-frame profile scans
-    \n\n"
-  status: 4
-  errors: []
-  versions:
-    all:
-    - 0.4.0-preview.3
-    - 0.4.0-preview.5
-    - 0.4.0-preview.6
-    - 0.5.0-preview.1
-    - 0.6.0-preview.1
-    - 0.7.0-preview.4
-    - 1.0.0
-    - 1.0.1
-    - 1.0.2
-    - 1.0.3
-    - 1.1.0-pre.2
-    - 1.1.0
-    - 1.1.1
-    compatible:
-    - 1.1.1
-    verified: 1.1.1
-  dependencies: []
-  resolvedDependencies: []
-  keywords: []
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-  hideInEditor: 1
-  isAssetStorePackage: 0
-  datePublishedTicks: 637705021060000000
-  documentationUrl: 
-  hasRepository: 1
-  repository:
-    type: git
-    url: https://github.cds.internal.unity3d.com/unity/com.unity.performance.profile-analyzer.git
-    revision: 6dcda6aee96901e98a4f01b85589054b9274ba74
-    path: 
-  unityLifecycle:
-    version: 1.1.1
-    nextVersion: 
-- packageId: com.unity.testtools.codecoverage@1.1.1
-  testable: 0
-  isDirectDependency: 0
-  version: 1.1.1
-  source: 1
-  resolvedPath: /home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Library/PackageCache/com.unity.testtools.codecoverage@1.1.1
-  assetPath: Packages/com.unity.testtools.codecoverage
-  name: com.unity.testtools.codecoverage
-  displayName: Code Coverage
-  author:
-    name: 
-    email: 
-    url: 
-  category: 
-  type: 
-  description: Use this package to export code coverage data and reports from your
-    automated tests. Additionally, the Code Coverage package offers a Coverage Recording
-    feature which allows capturing coverage data on demand, for manual testing or
-    when there are no automated tests in the project.
-  status: 4
-  errors: []
-  versions:
-    all:
-    - 0.2.0-preview
-    - 0.2.1-preview
-    - 0.2.2-preview
-    - 0.2.3-preview
-    - 0.3.0-preview
-    - 0.3.1-preview
-    - 0.4.0-preview
-    - 0.4.1-preview
-    - 0.4.2-preview
-    - 0.4.3-preview
-    - 1.0.0-pre.1
-    - 1.0.0-pre.2
-    - 1.0.0-pre.3
-    - 1.0.0-pre.4
-    - 1.0.0
-    - 1.0.1
-    - 1.1.0
-    - 1.1.1
-    - 1.2.0-exp.1
-    - 1.2.0-exp.2
-    - 1.2.0-exp.3
-    - 1.2.0-exp.4
-    - 1.2.0-exp.5
-    - 1.2.0-exp.6
-    - 1.2.0-exp.7
-    compatible:
-    - 1.1.1
-    - 1.2.0-exp.1
-    - 1.2.0-exp.2
-    - 1.2.0-exp.3
-    - 1.2.0-exp.4
-    - 1.2.0-exp.5
-    - 1.2.0-exp.6
-    - 1.2.0-exp.7
-    verified: 1.1.1
-  dependencies:
-  - name: com.unity.test-framework
-    version: 1.0.16
-  - name: com.unity.settings-manager
-    version: 1.0.1
-  resolvedDependencies:
-  - name: com.unity.test-framework
-    version: 1.1.31
-  - name: com.unity.ext.nunit
-    version: 1.0.6
-  - name: com.unity.modules.imgui
-    version: 1.0.0
-  - name: com.unity.modules.jsonserialize
-    version: 1.0.0
-  - name: com.unity.settings-manager
-    version: 2.0.1
-  keywords:
-  - test
-  - coverage
-  - testing
-  - opencover
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-  hideInEditor: 1
-  isAssetStorePackage: 0
-  datePublishedTicks: 637755928510000000
-  documentationUrl: 
-  hasRepository: 1
-  repository:
-    type: git
-    url: https://github.cds.internal.unity3d.com/unity/com.unity.testtools.codecoverage.git
-    revision: c8c48a225d2b1a7fd5e3b1698e7aba02970ad9fe
-    path: 
-  unityLifecycle:
-    version: 1.1.1
-    nextVersion: 
-- packageId: com.unity.services.core@1.0.1
-  testable: 0
-  isDirectDependency: 0
-  version: 1.0.1
-  source: 1
-  resolvedPath: /home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Library/PackageCache/com.unity.services.core@1.0.1
-  assetPath: Packages/com.unity.services.core
-  name: com.unity.services.core
-  displayName: Services Core
-  author:
-    name: 
-    email: 
-    url: 
-  category: 
-  type: 
-  description: 'This package defines common components used by multiple Game Service
-    packages.
+  type: library
+  description: 'Newtonsoft Json for use in Unity projects and Unity packages. Currently
+    synced to version 12.0.2.
 
-    These are standardized and aim to unify the overall experience
-    of working with Game Services packages.'
+
+    This package is used for advanced json serialization
+    and deserialization. Most Unity users will be better suited using the existing
+    json tools built into Unity.
+
+    To avoid assembly clashes, please use this
+    package if you intend to use Newtonsoft Json.'
   status: 4
   errors: []
   versions:
     all:
-    - 1.0.1
-    - 1.1.0-pre.7
-    - 1.1.0-pre.8
-    - 1.1.0-pre.9
-    - 1.1.0-pre.10
-    - 1.1.0-pre.11
-    - 1.1.0-pre.41
-    - 1.1.0-pre.69
-    - 1.2.0
-    - 1.3.1
-    - 1.3.2
-    compatible:
-    - 1.0.1
-    - 1.1.0-pre.7
-    - 1.1.0-pre.8
-    - 1.1.0-pre.9
-    - 1.1.0-pre.10
-    - 1.1.0-pre.11
-    - 1.1.0-pre.41
-    - 1.1.0-pre.69
-    - 1.2.0
-    - 1.3.1
-    - 1.3.2
-    verified: 1.0.1
-  dependencies:
-  - name: com.unity.modules.unitywebrequest
-    version: 1.0.0
-  resolvedDependencies:
-  - name: com.unity.modules.unitywebrequest
-    version: 1.0.0
-  keywords: []
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-  hideInEditor: 1
-  isAssetStorePackage: 0
-  datePublishedTicks: 637604883250000000
-  documentationUrl: 
-  hasRepository: 1
-  repository:
-    type: git
-    url: https://github.cds.internal.unity3d.com/unity/operate-services-sdk.git
-    revision: 4cd880d4fd5c60597629249bf4f324e4c8d7aa2e
-    path: 
-  unityLifecycle:
-    version: 1.0.1
-    nextVersion: 1.1.0-pre.8
-- packageId: com.unity.settings-manager@2.0.1
-  testable: 0
-  isDirectDependency: 0
-  version: 2.0.1
-  source: 1
-  resolvedPath: /home/jeff/Documents/Unity Projects/Crazy-Compost-Cabbie/Library/PackageCache/com.unity.settings-manager@2.0.1
-  assetPath: Packages/com.unity.settings-manager
-  name: com.unity.settings-manager
-  displayName: Settings Manager
-  author:
-    name: 
-    email: 
-    url: 
-  category: 
-  type: 
-  description: A framework for making any serializable field a setting, complete
-    with a pre-built settings interface.
-  status: 4
-  errors: []
-  versions:
-    all:
-    - 0.1.0-preview.4
-    - 0.1.0-preview.8
-    - 1.0.0
-    - 1.0.1
-    - 1.0.2
-    - 1.0.3
     - 2.0.0
-    - 2.0.1
     compatible:
-    - 2.0.1
-    verified: 2.0.1
+    - 2.0.0
+    verified: 2.0.0
   dependencies: []
   resolvedDependencies: []
   keywords: []
@@ -3155,16 +2870,17 @@ m_ResolvedPackages:
     scopes: []
     isDefault: 1
     capabilities: 7
+  hasRegistry: 1
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 637744099390000000
+  datePublishedTicks: 0
   documentationUrl: 
   hasRepository: 1
   repository:
     type: git
-    url: https://github.com/Unity-Technologies/com.unity.settings-manager.git
-    revision: 9b7c12d04ef880168151c127fd6b37b5931197dc
+    url: https://github.cds.internal.unity3d.com/unity/com.unity.nuget.newtonsoft-json.git
+    revision: d2fd6ed876261bbd82f59199ad711e7667bf633a
     path: 
   unityLifecycle:
-    version: 2.0.1
+    version: 2.0.0
     nextVersion: 

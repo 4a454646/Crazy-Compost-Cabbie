@@ -158,24 +158,11 @@ namespace UnityEditor.UI
         /// </summary>
         protected void RaycastControlsGUI()
         {
-            EditorGUI.BeginChangeCheck();
             EditorGUILayout.PropertyField(m_RaycastTarget);
-            if (EditorGUI.EndChangeCheck() && target is Graphic graphic)
-            {
-                graphic.SetRaycastDirty();
-            }
-
-            float height = EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing;
-            if (m_ShowPadding)
-                height += (EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing) * 4;
-
-            var rect = EditorGUILayout.GetControlRect(true, height);
-            EditorGUI.BeginProperty(rect, m_PaddingContent, m_RaycastPadding);
-            rect.height = EditorGUIUtility.singleLineHeight;
 
             using (var check = new EditorGUI.ChangeCheckScope())
             {
-                m_ShowPadding = EditorGUI.Foldout(rect, m_ShowPadding, m_PaddingContent, true);
+                m_ShowPadding = EditorGUILayout.Foldout(m_ShowPadding, m_PaddingContent, true);
                 if (check.changed)
                 {
                     SceneView.RepaintAll();
@@ -189,17 +176,10 @@ namespace UnityEditor.UI
                     EditorGUI.indentLevel++;
                     Vector4 newPadding = m_RaycastPadding.vector4Value;
 
-                    rect.y += EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing;
-                    newPadding.x = EditorGUI.FloatField(rect, m_LeftContent, newPadding.x);
-
-                    rect.y += EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing;
-                    newPadding.y = EditorGUI.FloatField(rect, m_BottomContent, newPadding.y);
-
-                    rect.y += EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing;
-                    newPadding.z = EditorGUI.FloatField(rect, m_RightContent, newPadding.z);
-
-                    rect.y += EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing;
-                    newPadding.w = EditorGUI.FloatField(rect, m_TopContent, newPadding.w);
+                    newPadding.x = EditorGUILayout.FloatField(m_LeftContent, newPadding.x);
+                    newPadding.y = EditorGUILayout.FloatField(m_BottomContent, newPadding.y);
+                    newPadding.z = EditorGUILayout.FloatField(m_RightContent, newPadding.z);
+                    newPadding.w = EditorGUILayout.FloatField(m_TopContent, newPadding.w);
 
                     if (check.changed)
                     {
@@ -208,8 +188,6 @@ namespace UnityEditor.UI
                     EditorGUI.indentLevel--;
                 }
             }
-
-            EditorGUI.EndProperty();
         }
     }
 }
