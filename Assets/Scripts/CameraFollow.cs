@@ -8,8 +8,22 @@ public class CameraFollow : MonoBehaviour {
     [SerializeField] private Transform target;
     [SerializeField] private float translateSpeed;
     [SerializeField] private float rotationSpeed;
+    private CarController carController;
+
+    private void Start() {
+        carController = FindObjectOfType<CarController>();
+    }
 
     private void FixedUpdate() {
+        if (carController.speed > 50) {
+            translateSpeed = 5;
+        }
+        else if (carController.speed > 20) {
+            translateSpeed = (80 - carController.speed)/6;
+        }
+        else {
+            translateSpeed = 10;
+        }
         HandleTranslation();
         HandleRotation();
     }
