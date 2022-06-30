@@ -347,6 +347,7 @@
 "Assets/CarFollow.cs"
 "Assets/Scripts/CameraFollow.cs"
 "Assets/Scripts/CarController.cs"
+"Assets/Scripts/ComSetter.cs"
 "Assets/Scripts/InputManager.cs"
 "Assets/Scripts/ObjectLauncher.cs"
 -langversion:9.0
