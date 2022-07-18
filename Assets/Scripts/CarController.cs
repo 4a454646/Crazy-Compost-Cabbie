@@ -7,7 +7,6 @@ public class CarController : MonoBehaviour {
     [SerializeField] private WheelCollider[] wheelColliders;
     [SerializeField] private GameObject[] wheelMeshes;
     [SerializeField] private float torque = 200;
-    [SerializeField] private float steeringMax = 4;
     private enum DriveType {
         Front,
         Rear,

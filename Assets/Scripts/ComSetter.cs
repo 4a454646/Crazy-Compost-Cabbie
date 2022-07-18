@@ -5,6 +5,6 @@ using UnityEngine;
 public class ComSetter : MonoBehaviour {
     [SerializeField] Transform com;
     private void Start() {
-        GetComponent<Rigidbody>().centerOfMass = com.position;
+        GetComponent<Rigidbody>().centerOfMass = com.localPosition;
     }
 }
