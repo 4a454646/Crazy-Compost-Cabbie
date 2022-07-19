@@ -36,12 +36,17 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets/QuickOutline/Scripts/Outline.cs" />
      <Compile Include="Assets/Scripts/ComSetter.cs" />
      <Compile Include="Assets/CarFollow.cs" />
      <Compile Include="Assets/Scripts/InputManager.cs" />
      <Compile Include="Assets/Scripts/CameraFollow.cs" />
      <Compile Include="Assets/Scripts/CarController.cs" />
      <Compile Include="Assets/Scripts/ObjectLauncher.cs" />
+     <Compile Include="Assets/Scripts/CompostBin.cs" />
+     <None Include="Assets/QuickOutline/Resources/Shaders/OutlineMask.shader" />
+     <None Include="Assets/QuickOutline/Readme.txt" />
+     <None Include="Assets/QuickOutline/Resources/Shaders/OutlineFill.shader" />
     <Reference Include="UnityEngine">
         <HintPath>/home/jeff/Unity/Hub/Editor/2021.3.5f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

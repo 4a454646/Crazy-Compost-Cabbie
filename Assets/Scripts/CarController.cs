@@ -19,6 +19,12 @@ public class CarController : MonoBehaviour {
     [SerializeField] public float speed;
     [SerializeField] private float brakeTorque;
     [SerializeField] private float[] slip = new float[4];
+    [SerializeField] private float binCollectionDist = 4f;
+    [SerializeField] private float collectionSpeed = 4f;
+    [SerializeField] private Transform collectionPoint;
+    [SerializeField] private int binsCollected = 0;
+    [SerializeField] private CompostBin[] bins;
+    [SerializeField] public bool lockActions;
     private Rigidbody rb;
     private InputManager inputManager;
 
@@ -26,10 +32,41 @@ public class CarController : MonoBehaviour {
         inputManager = FindObjectOfType<InputManager>();
         rb = GetComponent<Rigidbody>(); 
         rb.centerOfMass = centerOfMass.transform.localPosition;
+        GameObject[] gameObjectBins = GameObject.FindGameObjectsWithTag("Bin");
+        for (int i = 0; i < bins.Length; i++) {
+            bins[i] = gameObjectBins[i].GetComponent<CompostBin>();
+            bins[i].TrySetUnavailable();
+        }
     }
 
+    public void UpdateCompost() {
+        binsCollected += 1;
+        lockActions = false;
+        print($"A bin was collected! The user now has {binsCollected} bins collected.");
+    }
+
+    private void Update() {
+        if (speed < collectionSpeed) { 
+            for (int i = 0; i < bins.Length; i++) {
+                if (bins[i] != null) {
+                    float dist = Vector3.Distance(transform.position, bins[i].transform.position);
+                    if (dist < binCollectionDist) {
+                        if (Input.GetMouseButtonDown(0)) {
+                            bins[i].CollectBin(collectionPoint.position);
+                        }
+                        bins[i].TrySetAvailable();
+                    }
+                    else {
+                        bins[i].TrySetUnavailable();
+                    }
+                }
+            }
+        }
+    }
+
+
     private void FixedUpdate() { 
-        AnimatewheelColliders();
+        AnimateWheelColliders();
         SteerVehicle();
         MoveVehicle();
         AddDownForce();
@@ -79,7 +116,7 @@ public class CarController : MonoBehaviour {
         rb.AddForce(-transform.up * downForce * rb.velocity.magnitude);
     }
 
-    private void AnimatewheelColliders() {
+    private void AnimateWheelColliders() {
         Vector3 wheelPosition = Vector3.zero;
         Quaternion wheelRotation = Quaternion.identity;
 

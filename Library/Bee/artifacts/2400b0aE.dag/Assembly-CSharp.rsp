@@ -348,9 +348,11 @@
 -r:"Library/Bee/artifacts/2400b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/2400b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/CarFollow.cs"
+"Assets/QuickOutline/Scripts/Outline.cs"
 "Assets/Scripts/CameraFollow.cs"
 "Assets/Scripts/CarController.cs"
 "Assets/Scripts/ComSetter.cs"
+"Assets/Scripts/CompostBin.cs"
 "Assets/Scripts/InputManager.cs"
 "Assets/Scripts/ObjectLauncher.cs"
 -langversion:9.0

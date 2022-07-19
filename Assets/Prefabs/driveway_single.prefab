@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7762502320525487877}
   m_Layer: 0
   m_Name: driveway_single
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,6 +44,10 @@ PrefabInstance:
     - target: {fileID: 4710710073290415101, guid: 97bbb986c52e95e86871050643b689ef, type: 3}
       propertyPath: m_Name
       value: driveway_road_single
+      objectReference: {fileID: 0}
+    - target: {fileID: 4710710073290415101, guid: 97bbb986c52e95e86871050643b689ef, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 5337923855092810055, guid: 97bbb986c52e95e86871050643b689ef, type: 3}
       propertyPath: m_RootOrder
@@ -150,6 +154,10 @@ PrefabInstance:
     - target: {fileID: 6375255890845726305, guid: 4c9927579e45b34a9acf802cf2c40fe9, type: 3}
       propertyPath: m_Name
       value: driveway (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6375255890845726305, guid: 4c9927579e45b34a9acf802cf2c40fe9, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c9927579e45b34a9acf802cf2c40fe9, type: 3}
