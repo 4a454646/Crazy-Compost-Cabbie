@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class CarController : MonoBehaviour {
     [SerializeField] private WheelCollider[] wheelColliders;
@@ -25,6 +26,14 @@ public class CarController : MonoBehaviour {
     [SerializeField] private int binsCollected = 0;
     [SerializeField] private CompostBin[] bins;
     [SerializeField] public bool lockActions;
+    [SerializeField] private List<Light> breakLights;
+    [SerializeField] private List<Light> reverseLights;
+    [SerializeField] private GameObject needle;
+    [SerializeField] private TextMeshProUGUI binsCollectedText;
+    [SerializeField] private TextMeshProUGUI timerText;
+    [SerializeField] private float timer;
+    [SerializeField] private bool hasStarted = false;
+    
     private Rigidbody rb;
     private InputManager inputManager;
 
@@ -37,12 +46,18 @@ public class CarController : MonoBehaviour {
             bins[i] = gameObjectBins[i].GetComponent<CompostBin>();
             bins[i].TrySetUnavailable();
         }
+        binsCollectedText.text = $"{binsCollected} / {bins.Length}";
+        StartCoroutine(AnimateStart());
+    }
+
+    private IEnumerator AnimateStart() {
+        
     }
 
     public void UpdateCompost() {
         binsCollected += 1;
-        lockActions = false;
         print($"A bin was collected! The user now has {binsCollected} bins collected.");
+        binsCollectedText.text = $"{binsCollected} / {bins.Length}";
     }
 
     private void Update() {
@@ -62,6 +77,18 @@ public class CarController : MonoBehaviour {
                 }
             }
         }
+        else {
+            for (int i = 0; i < bins.Length; i++) {
+                if (bins[i] != null) {
+                    bins[i].TrySetUnavailable();
+                }
+            }
+        }
+        // format timer text to be 00:00.00
+        if (hasStarted) {
+            timer = Time.timeSinceLevelLoad;
+            timerText.text = $"{Mathf.Floor(timer/60):00}:{Mathf.Floor(timer%60):00}.{Mathf.Floor((timer*100)%100):00}";
+        }
     }
 
 
@@ -73,7 +100,20 @@ public class CarController : MonoBehaviour {
     }
 
     private void MoveVehicle() { 
-        if (!inputManager.breaking) {
+        if (!inputManager.breaking && !lockActions) {
+            foreach (Light light in breakLights) {
+                light.enabled = false;
+            }
+            if (inputManager.vertical >= 0) {
+                foreach (Light light in reverseLights) {
+                    light.enabled = false;
+                }
+            }
+            else {
+                foreach (Light light in reverseLights) {
+                    light.enabled = true;
+                }
+            }
             if (driveType == DriveType.Front) {
                 wheelColliders[0].motorTorque = inputManager.vertical * torque;
                 wheelColliders[1].motorTorque = inputManager.vertical * torque;
@@ -90,10 +130,22 @@ public class CarController : MonoBehaviour {
             wheelColliders[3].brakeTorque = 0;
         }
         else { 
+            foreach (Light light in breakLights) {
+                light.enabled = true;
+            }
             wheelColliders[2].brakeTorque = brakeTorque;
             wheelColliders[3].brakeTorque = brakeTorque;
         }
         speed = rb.velocity.magnitude * 2.24f;
+        UpdateSpeedometer();
+    }
+
+    private void UpdateSpeedometer() {
+        // at 0 mph: z angle is 105
+        // at 70 mph: z angle is 0105
+        // rotate needle to match speed
+        float angle = 105 - (speed / 70) * 105;
+        needle.transform.localEulerAngles = new Vector3(0, 0, angle);
     }
 
     private void SteerVehicle() {
