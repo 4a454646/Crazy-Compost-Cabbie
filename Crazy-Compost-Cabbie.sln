@@ -71,6 +71,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.SysrootPackage.Editor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.VSCode.Editor", "Unity.VSCode.Editor.csproj", "{671c03d8-95af-c484-db53-c5475ec30a18}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.2D.Sprite.Editor", "Unity.2D.Sprite.Editor.csproj", "{d14496d8-4eed-6b22-8def-12f5b4927e66}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityEditor.UI", "UnityEditor.UI.csproj", "{efcda251-f8f2-3325-8171-9476ad54b2ed}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.Services.Core.Configuration.Editor", "Unity.Services.Core.Configuration.Editor.csproj", "{40ff14c1-3c49-0a5d-6dd8-0d85e6dd74af}"
@@ -156,6 +158,8 @@ Global
 		{58d40354-b485-e51f-03fe-c7712ac8ce57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{671c03d8-95af-c484-db53-c5475ec30a18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{671c03d8-95af-c484-db53-c5475ec30a18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{d14496d8-4eed-6b22-8def-12f5b4927e66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{d14496d8-4eed-6b22-8def-12f5b4927e66}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{efcda251-f8f2-3325-8171-9476ad54b2ed}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{efcda251-f8f2-3325-8171-9476ad54b2ed}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40ff14c1-3c49-0a5d-6dd8-0d85e6dd74af}.Debug|Any CPU.ActiveCfg = Debug|Any CPU

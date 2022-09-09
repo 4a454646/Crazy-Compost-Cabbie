@@ -37,16 +37,37 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets/QuickOutline/Scripts/Outline.cs" />
+     <Compile Include="Assets/Scripts/CloudGenerator.cs" />
      <Compile Include="Assets/Scripts/ComSetter.cs" />
-     <Compile Include="Assets/CarFollow.cs" />
+     <Compile Include="Assets/Scripts/CompostBin.cs" />
      <Compile Include="Assets/Scripts/InputManager.cs" />
      <Compile Include="Assets/Scripts/CameraFollow.cs" />
      <Compile Include="Assets/Scripts/CarController.cs" />
      <Compile Include="Assets/Scripts/ObjectLauncher.cs" />
-     <Compile Include="Assets/Scripts/CompostBin.cs" />
+     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
+     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
+     <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" />
+     <None Include="Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc" />
+     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader" />
      <None Include="Assets/QuickOutline/Resources/Shaders/OutlineMask.shader" />
+     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" />
+     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader" />
+     <None Include="Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt" />
+     <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader" />
+     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF.shader" />
+     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader" />
+     <None Include="Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt" />
+     <None Include="Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc" />
      <None Include="Assets/QuickOutline/Readme.txt" />
+     <None Include="Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc" />
+     <None Include="Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt" />
+     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader" />
+     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader" />
+     <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader" />
      <None Include="Assets/QuickOutline/Resources/Shaders/OutlineFill.shader" />
+     <None Include="Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt" />
+     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" />
+     <None Include="Assets/TextMesh Pro/Shaders/TMP_Sprite.shader" />
     <Reference Include="UnityEngine">
         <HintPath>/home/jeff/Unity/Hub/Editor/2021.3.5f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -703,6 +724,10 @@
       <Project>{1f7ae1ac-b252-af80-f3ad-fbd515252fd4}</Project>
       <Name>Unity.VisualScripting.SettingsProvider.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.2D.Sprite.Editor.csproj">
+      <Project>{d14496d8-4eed-6b22-8def-12f5b4927e66}</Project>
+      <Name>Unity.2D.Sprite.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Toolchain.Linux-x86_64.csproj">
       <Project>{2750b75c-c68b-1f8d-1523-77b8144338c9}</Project>
       <Name>Unity.Toolchain.Linux-x86_64</Name>
@@ -723,13 +748,13 @@
       <Project>{ff458ba6-5643-1bdd-2bb6-6b6b8f344604}</Project>
       <Name>Unity.Rider.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.Flow.csproj">
-      <Project>{b96900e5-dd5b-add3-980a-9efb00d7afa6}</Project>
-      <Name>Unity.VisualScripting.Flow</Name>
-    </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
       <Project>{7d412d6d-46d3-6e84-fec6-281f559a08d9}</Project>
       <Name>UnityEngine.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualScripting.Flow.csproj">
+      <Project>{b96900e5-dd5b-add3-980a-9efb00d7afa6}</Project>
+      <Name>Unity.VisualScripting.Flow</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Core.csproj">
       <Project>{82859a7c-9669-a21c-9636-cb0ca8a0d6be}</Project>

@@ -10,7 +10,7 @@ public class CompostBin : MonoBehaviour {
     [SerializeField] private int baseOutlineWidth;
     [SerializeField] private int availableOutlineWidth;
 
-    private void Start() {
+    private void Awake() {
         outline = GetComponent<Outline>();
     }
 
@@ -23,6 +23,8 @@ public class CompostBin : MonoBehaviour {
     }
 
     private IEnumerator CollectBinCoro(Vector3 collectionPoint) {
+        CarController carController = FindObjectOfType<CarController>();
+        carController.lockActions = true;
         Destroy(GetComponent<Rigidbody>());
         Destroy(GetComponent<MeshCollider>());
         Vector3 vertCollectionPoint = new Vector3(transform.position.x, collectionPoint.y, transform.position.z);
@@ -35,11 +37,12 @@ public class CompostBin : MonoBehaviour {
             yield return new WaitForSeconds(0.025f);
         }
         for (int i = 0; i < 20; i++) {
-            transform.localScale = new Vector3((2 * (19-i)/20f), (2 * (19-i)/20f), (2 * (19-i)/20f));
             yield return new WaitForSeconds(0.007f);
+            transform.localScale = new Vector3((2 * (20-i)/20f), (2 * (20-i)/20f), (2 * (20-i)/20f));
         }
         Destroy(gameObject);
         FindObjectOfType<CarController>().UpdateCompost();
+        carController.lockActions = false;
     }
 
     public void TrySetAvailable() {
