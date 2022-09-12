@@ -25,7 +25,7 @@ public class CloudData{
     }
 
 	//Used to instanciate our cloud
-    public CloudData(Vector3 pos, Vector3 scale, Quaternion rot, int x, int y, float distFromCam, float randomMinSize, float randomMaxSize, float minGrowthMultiplier, float maxGrowthMultiplier){
+    public CloudData(Vector3 pos, Vector3 scale, Quaternion rot, int x, int y, float distFromCam, float randomMinSize, float randomMaxSize, float minGrowthMultiplier, float maxGrowthMultiplier, float initialGrowthMultiplier){
 		this.pos = pos;
         this.scale = scale;
         this.rot = rot;
@@ -33,7 +33,7 @@ public class CloudData{
         this.x = x;
         this.y = y;
         this.randomMaxSize = Random.Range(randomMinSize, randomMaxSize);
-        this.randomGrowthSpeed = Random.Range(minGrowthMultiplier, maxGrowthMultiplier);
+        this.randomGrowthSpeed = Random.Range(minGrowthMultiplier, maxGrowthMultiplier) * initialGrowthMultiplier;
 	}
 }
 
@@ -70,17 +70,32 @@ public class CloudGenerator : MonoBehaviour {
     [SerializeField] private float minGrowthMultiplier;
     [SerializeField] private float maxGrowthMultiplier;
     [SerializeField] private float cloudHeightVariation;
+    [SerializeField] private float initialGrowthRate;
 
     private List<List<CloudData>> batches = new List<List<CloudData>>();
     private List<List<CloudData>> batchesToUpdate = new List<List<CloudData>>();
 
+    // TODO: CHECK IF THE CLOUDS ARE IN FRONT OR BEHIND OF THE PLAYER (VERSUS DISTANCE)
+    
 	private void Start() {
 		for(int batchesX = 0; batchesX < batchesToCreate; batchesX++) {
 			for(int batchesY = 0; batchesY < batchesToCreate; batchesY++) {
 				BuildCloudBatch(batchesX, batchesY);
 			}
 		}
+        offsetX = Random.Range(0, 1000);
+        offsetY = Random.Range(0, 1000);
+        StartCoroutine(UpdateCloudGrowthRates());
 	}
+
+    private IEnumerator UpdateCloudGrowthRates() {
+        yield return new WaitForSeconds(1f);
+        foreach (var batch in batchesToUpdate) {
+            foreach (var cloud in batch) {
+                cloud.randomGrowthSpeed /= initialGrowthRate;
+            }
+        }
+    }
 
 	//We start by looping though our X and Y values to generate a batch that's 7x7 clouds
     //Limited due to 1024 max of Graphics.DrawMeshInstanciated
@@ -93,7 +108,7 @@ public class CloudGenerator : MonoBehaviour {
 		for (int x = 0; x < cloudCount; x++) {
             for (int y = 0; y < cloudCount; y++) {
                 //Add a cloud for each loop
-                AddCloud(currBatch, x + xLoop * cloudCount, y + yLoop * 31);
+                AddCloud(currBatch, x + xLoop * cloudCount, y + yLoop * cloudCount);
             }
         }
 
@@ -138,7 +153,7 @@ public class CloudGenerator : MonoBehaviour {
         float distToCam = Vector3.Distance(new Vector3(x, transform.position.y, y), cam.transform.position);
 
 		//Finally we add our new CloudData cloud to the current batch
-        currBatch.Add(new CloudData(alteredPosition, Vector3.zero, Quaternion.identity, x, y, distToCam, randomMinSize, randomMaxSize, minGrowthMultiplier, maxGrowthMultiplier));
+        currBatch.Add(new CloudData(alteredPosition, Vector3.zero, Random.rotation, x, y, distToCam, randomMinSize, randomMaxSize, minGrowthMultiplier, maxGrowthMultiplier, initialGrowthRate));
 	}
 
 	//We need to generate our noise
@@ -157,6 +172,7 @@ public class CloudGenerator : MonoBehaviour {
                     BuildCloudBatch(batchesX, batchesY);
                 }
             }
+            StartCoroutine(UpdateCloudGrowthRates());
         }
     }
 

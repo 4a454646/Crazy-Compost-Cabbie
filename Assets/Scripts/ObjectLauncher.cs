@@ -10,6 +10,8 @@ public class ObjectLauncher : MonoBehaviour {
     [SerializeField] private bool hasCollided = false;
     [SerializeField] private bool specialTriggered = false;
     [SerializeField] private GameObject specialObject;
+    [SerializeField] private CarController carController;
+    private Colors colors;
     private enum SpecialBehavior { 
         Normal,
         Streetlight,
@@ -17,13 +19,23 @@ public class ObjectLauncher : MonoBehaviour {
         Hydrant,
         TelephonePole,
         Tree0,
+        Tree1,
+        Cone,
+        Bin, 
+        Car,
+        StopSign,
     }
     [SerializeField] private SpecialBehavior behaviorType = SpecialBehavior.Normal;
     private Rigidbody rb;
     private void Start() {
+        colors = FindObjectOfType<Colors>();
         rb = GetComponent<Rigidbody>();
         if (behaviorType == SpecialBehavior.Streetlight) {
             specialObject.GetComponent<Light>().enabled = true;
+        }
+        carController = FindObjectOfType<CarController>();
+        if (Time.time < 1) {
+            carController.numDestroyableObjects++;
         }
     }
 
@@ -51,19 +63,25 @@ public class ObjectLauncher : MonoBehaviour {
                 )
             ));
         }
-        if (collision.gameObject.tag != "Ground") {
+        if (collision.gameObject.tag == "Player") {
             // switch for the different SpecialBehaviors
             if (!specialTriggered) { 
+                print($"should say destroyed {gameObject.name}");
                 specialTriggered = true;
+                carController.numDestroyedObjects++;
                 switch (behaviorType) {
                     case SpecialBehavior.Streetlight:
                         StartCoroutine(FlickerLight());
+                        carController.PrintText("Streetlight", colors.white);
                         break;
                     case SpecialBehavior.Trashcan:
+                        carController.PrintText("Trash Can", colors.green);
                         break;
                     case SpecialBehavior.Hydrant:
+                        carController.PrintText("Fire Hydrant", colors.red);
                         break;
                     case SpecialBehavior.TelephonePole:
+                        carController.PrintText("Telephone Pole", colors.brown);
                         break;
                     case SpecialBehavior.Tree0:
                         for (int i = 0; i < specialObject.transform.childCount; i++) {
@@ -71,8 +89,25 @@ public class ObjectLauncher : MonoBehaviour {
                             child.AddComponent<Rigidbody>();
                             child.GetComponent<Rigidbody>().mass = 100;
                             child.AddComponent<ObjectLauncher>();
-                            child.GetComponent<ObjectLauncher>().vertForceMultiplier = 500;
+                            child.GetComponent<ObjectLauncher>().vertForceMultiplier = 1000;
+                            child.AddComponent<ObjectLauncher>();
                         }
+                        carController.PrintText("Tree", colors.green);
+                        break;
+                    case SpecialBehavior.Tree1:
+                        carController.PrintText("Tree", colors.green);
+                        break;
+                    case SpecialBehavior.Cone:
+                        carController.PrintText("Traffic Cone", colors.orange);
+                        break;
+                    case SpecialBehavior.Bin:
+                        carController.PrintText("Compost Bin", colors.yellow);
+                        break;
+                    case SpecialBehavior.Car:
+                        carController.PrintText("Car", colors.blue);
+                        break;
+                    case SpecialBehavior.StopSign:
+                        carController.PrintText("Stop Sign", colors.red);
                         break;
                     default:
                         break;

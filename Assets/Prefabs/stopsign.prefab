@@ -130,7 +130,8 @@ MonoBehaviour:
   hasCollided: 0
   specialTriggered: 0
   specialObject: {fileID: 0}
-  behaviorType: 0
+  carController: {fileID: 0}
+  behaviorType: 10
 --- !u!65 &7030832645466146777
 BoxCollider:
   m_ObjectHideFlags: 0

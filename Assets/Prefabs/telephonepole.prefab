@@ -759,3 +759,7 @@ MonoBehaviour:
   vertRandomness: 20
   horizRandomness: 10
   hasCollided: 0
+  specialTriggered: 0
+  specialObject: {fileID: 0}
+  carController: {fileID: 0}
+  behaviorType: 10

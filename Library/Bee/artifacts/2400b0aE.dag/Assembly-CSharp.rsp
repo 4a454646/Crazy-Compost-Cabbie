@@ -352,10 +352,14 @@
 "Assets/Scripts/CameraFollow.cs"
 "Assets/Scripts/CarController.cs"
 "Assets/Scripts/CloudGenerator.cs"
+"Assets/Scripts/ColorGenerator.cs"
+"Assets/Scripts/Colors.cs"
 "Assets/Scripts/ComSetter.cs"
 "Assets/Scripts/CompostBin.cs"
 "Assets/Scripts/InputManager.cs"
 "Assets/Scripts/ObjectLauncher.cs"
+"Assets/Scripts/Skidmarks.cs"
+"Assets/Scripts/WheelSkid.cs"
 -langversion:9.0
 
 /deterministic

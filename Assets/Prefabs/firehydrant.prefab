@@ -333,6 +333,10 @@ MonoBehaviour:
   vertRandomness: 250
   horizRandomness: 250
   hasCollided: 0
+  specialTriggered: 0
+  specialObject: {fileID: 0}
+  carController: {fileID: 0}
+  behaviorType: 3
 --- !u!1 &7761675843957251244
 GameObject:
   m_ObjectHideFlags: 0
